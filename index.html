@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harry fitness</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-image:url( img/gym.jpg)
+    }
+    .left{
+        position:absolute ;
+      /*  left:34px ;*/
+        top:0px;
+        display: inline block;
+      /*  border: 2px solid green;*/
+       
+    }
+    .left img{
+        width: 136px;
+        filter: invert(100px);
+    
+    }
+    .left div{
+        text-align: center;
+    }
+
+    .mid{
+        display: block;
+        width: 40% ;
+        margin: 20px auto;
+       /* border: 2px solid red;*/
+
+
+    }
+    .right{ 
+        position: absolute;
+        right: 34px;
+        top: 12px;
+        display:  inline block;
+/*border: 2px solid yellow;*/
+
+
+    }
+    .navbar{
+        display: inline;
+        color: red;
+        
+        }
+    .navbar li{
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }  
+    .navbar li a:hover,  .navbar li a.activate{
+        text-decoration: underline;
+        color: rgba(249, 8, 8, 0.89);
+    }
+    .btn{
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 2px 16px;
+       /* border: 2px solid gray;*/
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .btn:hover{
+          background-color: gray;
+    }
+    .container{
+        color: tomato;
+        font-size: large;
+      /*  border: 2px solid green;*/
+        margin: 104px 100px ;
+        padding: 20px 200px ;
+        width: 500%;
+
+    }
+    .from-group input{
+        text-align: center;
+        display: block;
+        width: 34px;
+        padding: 6px;
+       /* border: 2px solid black;*/
+        margin: 3px auto;
+
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+        <img src="img/istockphoto-1362037458-1024x1024.jpg" alt="">
+          <div>harry fitness</div>
+         
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">call us now</button><button class="btn">emailus</button>
+            
+        </div>
+
+
+    </header>
+     <div class="container"> 
+        <h1>join the best gym of delhi now </h1>
+        <form action="formData.html" method="get">
+
+           <div class="formgroup">
+            <input type="text" id="custName" placeholder="Enter your name">
+
+           </div>
+
+           <div class="formgroup">
+            <input type="text" name="" placeholder="Enter your number">
+            
+           </div>
+
+           <div class="formgroup">
+            <input type="text" name="" placeholder="Enter your ">
+            
+           </div>
+
+           <div class="formgroup">
+            <input type="text" name="" placeholder="Enter your age">
+            
+           </div>
+           <button class="btn" onclick="printCustInfo()">submit</button>
+
+        </form>
+
+        <p id="demo"></p>
+
+        <script>
+            function printCustInfo() {
+                var x = document.getElementById("custName").value;
+                document.getElementById("demo").innerHTML = x;
+                console.log(x);
+                const urlParams = new URLSearchParams(window.location.search);
+                console.log(urlParams)
+            }
+        </script>
+     </div>
+    
+</body>
+</html>
